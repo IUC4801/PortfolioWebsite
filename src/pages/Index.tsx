@@ -10,9 +10,9 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Scanline overlay */}
-      <div className="fixed inset-0 scanline pointer-events-none z-50 opacity-50" />
+    <div className="min-h-screen bg-background relative transition-colors duration-300">
+      {/* Scanline overlay - theme aware */}
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-30 dark:opacity-50 bg-[linear-gradient(to_bottom,transparent_50%,hsl(var(--primary)/0.02)_50%)] bg-[size:100%_4px]" />
       
       <Navigation />
       <main>

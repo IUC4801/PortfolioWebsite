@@ -52,8 +52,8 @@ const Projects = () => {
             >
               {/* Mobile Layout */}
               <div className="md:hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded border border-border relative overflow-hidden mb-4">
-                  <div className="absolute inset-0 bg-[linear-gradient(hsl(180_100%_50%/0.05)_1px,transparent_1px),linear-gradient(90deg,hsl(180_100%_50%/0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded border border-border relative overflow-hidden mb-4 transition-colors duration-300">
+                  <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.05)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="font-mono text-muted-foreground text-xs sm:text-sm">{`<${project.title.split(' ')[0]} />`}</span>
                   </div>
@@ -88,8 +88,8 @@ const Projects = () => {
               }`}>
                 {/* Project Image */}
                 <div className={`md:col-span-7 ${index % 2 === 0 ? "" : "md:col-start-6"}`}>
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded border border-border relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-[linear-gradient(hsl(180_100%_50%/0.05)_1px,transparent_1px),linear-gradient(90deg,hsl(180_100%_50%/0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded border border-border relative overflow-hidden group transition-colors duration-300">
+                    <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.05)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="font-mono text-muted-foreground text-sm">{`<${project.title.split(' ')[0]} />`}</span>
                     </div>
