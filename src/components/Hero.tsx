@@ -38,10 +38,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex items-center gap-2"
+            className="font-mono text-primary text-sm sm:text-xl"
+            //className="flex items-center gap-2"
           >
-            <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-            <span className="font-mono text-primary text-sm sm:text-base">Security Researcher & Engineer</span>
+            Hello, World! I'm
           </motion.div>
           
           <motion.h1 

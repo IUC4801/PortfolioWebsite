@@ -3,10 +3,10 @@ import AnimatedSection from "./AnimatedSection";
 
 const experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Company",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
+    title: "Software Engineer",
+    company: "Microsoft",
+    location: "Bangalore, India",
+    period: "2025 - Present",
     description: [
       "Led development of AI-powered security monitoring system reducing threat detection time by 60%",
       "Architected microservices infrastructure handling 10M+ daily requests",
@@ -14,10 +14,10 @@ const experiences = [
     ],
   },
   {
-    title: "Security Engineer",
-    company: "Cybersecurity Firm",
-    location: "Remote",
-    period: "2020 - 2022",
+    title: "Software Engineer",
+    company: "Adobe",
+    location: "Bangalore, India",
+    period: "2023 - 2025",
     description: [
       "Conducted penetration testing and vulnerability assessments for Fortune 500 clients",
       "Developed automated security scanning tools using Python and Go",
@@ -25,10 +25,10 @@ const experiences = [
     ],
   },
   {
-    title: "Software Developer",
-    company: "Startup Inc.",
-    location: "New York, NY",
-    period: "2018 - 2020",
+    title: "Product Intern",
+    company: "Adobe",
+    location: "Remote",
+    period: "2023 - 2023",
     description: [
       "Built full-stack web applications using React, Node.js, and PostgreSQL",
       "Implemented CI/CD pipelines and containerized deployments",

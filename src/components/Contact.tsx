@@ -17,7 +17,7 @@ const Contact = () => {
         </p>
 
         {/* Quick stats for credibility */}
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
           {[
             { icon: Shield, label: "Security Focus", value: "Offensive & Defensive" },
             { icon: Code2, label: "Experience", value: "Full-Stack + ML" },
@@ -28,7 +28,7 @@ const Contact = () => {
               <span className="font-mono text-foreground">{stat.value}</span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Terminal-style contact */}
         <div className="bg-card border border-border rounded-lg overflow-hidden text-left max-w-xl mx-auto mb-8 sm:mb-12 transition-colors duration-300">
@@ -43,7 +43,7 @@ const Contact = () => {
               <span className="text-primary">$</span>
               <span className="text-muted-foreground">whoami</span>
             </div>
-            <p className="pl-4 text-foreground">Ayushi Chaudhuri - Security Engineer & Researcher</p>
+            <p className="pl-4 text-foreground">Ayushi Chaudhuri - Software Engineer & Security Enthusiast</p>
             
             <div className="flex items-center gap-2">
               <span className="text-primary">$</span>
@@ -58,7 +58,7 @@ const Contact = () => {
               </p>
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-foreground">San Francisco, CA</span>
+                <span className="text-foreground">Bangalore, India</span>
               </p>
             </div>
             
