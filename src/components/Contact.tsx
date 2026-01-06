@@ -1,4 +1,4 @@
-import { Mail, Send, MapPin, Terminal } from "lucide-react";
+import { Mail, Send, MapPin, Terminal, Shield, Code2 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const Contact = () => {
@@ -12,13 +12,26 @@ const Contact = () => {
         </div>
 
         <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2">
-          I'm currently open to new opportunities and collaborations. Whether you have a 
-          project in mind, want to discuss security, AI, or just want to say hello—my 
-          inbox is always open.
+          Open to security research collaborations, engineering roles, and interesting technical challenges. 
+          Let's discuss threat modeling, system architecture, or your next security-focused project.
         </p>
 
+        {/* Quick stats for credibility */}
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+          {[
+            { icon: Shield, label: "Security Focus", value: "Offensive & Defensive" },
+            { icon: Code2, label: "Experience", value: "Full-Stack + ML" },
+          ].map((stat) => (
+            <div key={stat.label} className="flex items-center gap-2 text-sm">
+              <stat.icon className="w-4 h-4 text-primary" />
+              <span className="text-muted-foreground">{stat.label}:</span>
+              <span className="font-mono text-foreground">{stat.value}</span>
+            </div>
+          ))}
+        </div>
+
         {/* Terminal-style contact */}
-        <div className="bg-card border border-border rounded-lg overflow-hidden text-left max-w-xl mx-auto mb-8 sm:mb-12">
+        <div className="bg-card border border-border rounded-lg overflow-hidden text-left max-w-xl mx-auto mb-8 sm:mb-12 transition-colors duration-300">
           <div className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 bg-secondary/50 border-b border-border">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-destructive/70" />
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary/50" />
@@ -30,7 +43,7 @@ const Contact = () => {
               <span className="text-primary">$</span>
               <span className="text-muted-foreground">whoami</span>
             </div>
-            <p className="pl-4 text-foreground">Your Name - Software Engineer</p>
+            <p className="pl-4 text-foreground">Ayushi Chaudhuri - Security Engineer & Researcher</p>
             
             <div className="flex items-center gap-2">
               <span className="text-primary">$</span>

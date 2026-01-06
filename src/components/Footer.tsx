@@ -2,7 +2,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-6 border-t border-border">
+    <footer className="py-12 px-6 border-t border-border transition-colors duration-300">
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-6">
@@ -23,7 +23,11 @@ const Footer = () => {
           </div>
           
           <p className="font-mono text-xs text-muted-foreground text-center">
-            Designed & Built by <span className="text-primary">Your Name</span>
+            Designed & Built by <span className="text-primary">Ayushi Chaudhuri</span>
+          </p>
+          
+          <p className="font-mono text-xs text-muted-foreground/70 text-center">
+            Security • Engineering • AI
           </p>
           
           <p className="font-mono text-xs text-muted-foreground/50">
