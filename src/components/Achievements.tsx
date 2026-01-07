@@ -24,7 +24,7 @@ const Achievements = () => {
 
   return (
     <AnimatedSection>
-    <section id="achievements" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative">
+    <section id="achievements" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative">
       <div className="container mx-auto max-w-5xl">
         <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
           <span className="font-mono text-primary text-sm sm:text-base">05.</span>
