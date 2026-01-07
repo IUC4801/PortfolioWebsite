@@ -13,13 +13,14 @@ const Achievements = () => {
       icon: FileText,
       category: "Research",
       title: "Published Research Paper",
-      description: "Android Malware Detection and Prevention using Machine Learning techniques",
+      description: "Android Malware Classification using Dynamic Federated Learning in Lecture Notes in Networks and Systems (LNNS) by Springer",
     },
   ];
 
   const certifications = [
     { name: "Certified Ethical Hacker (CEH)", issuer: "EC-Council" },
     { name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services" },
+    { name: "Microsoft Azure Fundamentals", issuer: "Microsoft" },
   ];
 
   return (

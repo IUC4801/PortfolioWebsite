@@ -92,7 +92,7 @@ const Hero = () => {
               </button>
               
               <a 
-                href="/resume.pdf" 
+                href="https://drive.google.com/file/d/1pPinzs7001aeWXPGFvRnHSkU7LkoUT31/view?usp=sharing" 
                 download="Ayushi_Chaudhuri_Resume.pdf" 
                 className="group flex items-center gap-2 border border-primary text-primary px-4 sm:px-6 py-2.5 sm:py-3 font-mono text-xs sm:text-sm font-medium transition-all duration-300 hover:bg-primary/10 hover:glow-sm rounded"
               >
