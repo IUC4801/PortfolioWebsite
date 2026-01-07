@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-6">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Twitter, href: "#", label: "Twitter" },
+              { icon: Github, href: "https://github.com/IUC4801", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/ayushichaudhuri/", label: "LinkedIn" },
+              { icon: Twitter, href: "https://x.com/ChaudhuriA67938", label: "Twitter" },
             ].map((social) => (
               <a
                 key={social.label}
@@ -24,10 +24,6 @@ const Footer = () => {
           
           <p className="font-mono text-xs text-muted-foreground text-center">
             Designed & Built by <span className="text-primary">Ayushi Chaudhuri</span>
-          </p>
-          
-          <p className="font-mono text-xs text-muted-foreground/70 text-center">
-            Security • Engineering • AI
           </p>
           
           <p className="font-mono text-xs text-muted-foreground/50">

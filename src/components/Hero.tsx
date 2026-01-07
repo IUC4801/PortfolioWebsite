@@ -103,8 +103,8 @@ const Hero = () => {
             
             <div className="flex items-center gap-3 sm:gap-4 mt-2 sm:mt-0">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/IUC4801", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/ayushichaudhuri/", label: "LinkedIn" },
                 { icon: Mail, href: "#contact", label: "Email" },
               ].map((social) => (
                 <a

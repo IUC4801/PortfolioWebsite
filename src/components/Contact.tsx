@@ -12,7 +12,7 @@ const Contact = () => {
         </div>
 
         <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2">
-          Open to security research collaborations, engineering roles, and interesting technical challenges. 
+          Open to security research collaborations, engineering roles, CTFs and interesting technical challenges. 
           Let's discuss threat modeling, system architecture, or your next security-focused project.
         </p>
 

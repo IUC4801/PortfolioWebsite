@@ -36,7 +36,7 @@ const About = () => {
             {[
               { icon: Code2, title: "Software Engineering", desc: "Full-stack development, system design, clean architecture" },
               { icon: Shield, title: "Cybersecurity", desc: "Threat analysis, penetration testing, secure coding" },
-              { icon: Brain, title: "Artificial Intelligence", desc: "Machine learning, NLP, computer vision" },
+              { icon: Brain, title: "Artificial Intelligence", desc: "Machine Learning, MCP, Agents" },
             ].map((item) => (
               <div
                 key={item.title}
