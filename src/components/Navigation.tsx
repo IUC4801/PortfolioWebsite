@@ -65,10 +65,10 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          {navItems.map((item, i) => (
+          {navItems.slice(0, -1).map((item, i) => (
             <button
               key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
+              onClick={() => scrollToSection(item.toLowerCase().replace(/ /g, "-"))}
               className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors duration-300 relative group"
             >
               <span className="text-primary/50 mr-1">0{i + 1}.</span>
@@ -76,6 +76,14 @@ const Navigation = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
+          
+          {/* Get In Touch Button */}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="font-mono text-sm px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+          >
+            Get In Touch
+          </button>
           
           {/* Theme Toggle */}
           <button
@@ -106,16 +114,24 @@ const Navigation = () => {
         style={{ top: "0" }}
       >
         <div className="flex flex-col items-center justify-center min-h-screen gap-8 px-6">
-          {navItems.map((item, i) => (
+          {navItems.slice(0, -1).map((item, i) => (
             <button
               key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
+              onClick={() => scrollToSection(item.toLowerCase().replace(/ /g, "-"))}
               className="font-mono text-lg text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               <span className="text-primary/50 mr-2">0{i + 1}.</span>
               {item}
             </button>
           ))}
+          
+          {/* Get In Touch Button - Mobile */}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="font-mono text-lg px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+          >
+            Get In Touch
+          </button>
           
           {/* Theme Toggle - Mobile */}
           <button
