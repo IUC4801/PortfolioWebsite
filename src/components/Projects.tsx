@@ -26,15 +26,12 @@ const featuredProjects = [
   },
 ];
 
+// Other projects - set github/live to undefined or remove to hide the link
 const otherProjects = [
-  // { title: "Flaky Network Simulator", desc: "Command line tool for simulating network conditions", tags: ["Python", "C++"] },
-  // { title: "CVE Dashboard", desc: "Real-time vulnerability tracker", tags: ["React", "API"] },
-  // { title: "LLM Security Suite", desc: "Prompt injection detector", tags: ["Python", "LLM"] },
-  // { title: "Container Scanner", desc: "Docker image vulnerability scanner", tags: ["Go", "Trivy"] },
-  { title: "Flaky Network Simulator", desc: "Command line tool for simulating network conditions", tags: ["Python", "C++"] },
-  { title: "CVE Dashboard", desc: "Real-time vulnerability tracker", tags: ["React", "API"] },
-  { title: "LLM Security Suite", desc: "Prompt injection detector", tags: ["Python", "LLM"] },
-  { title: "Container Scanner", desc: "Docker image vulnerability scanner", tags: ["Go", "Trivy"] },
+  { title: "Flaky Network Simulator", desc: "Command line tool for simulating network conditions", tags: ["Python", "C++"], github: undefined, live: undefined },
+  { title: "CVE Dashboard", desc: "Real-time vulnerability tracker", tags: ["React", "API"], github: undefined, live: undefined },
+  { title: "LLM Security Suite", desc: "Prompt injection detector", tags: ["Python", "LLM"], github: undefined, live: undefined },
+  { title: "Container Scanner", desc: "Docker image vulnerability scanner", tags: ["Go", "Trivy"], github: undefined, live: undefined },
 ];
 
 const Projects = () => {
@@ -150,8 +147,16 @@ const Projects = () => {
               <div className="flex items-start justify-between mb-3 sm:mb-4">
                 <Folder className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
                 <div className="flex gap-3">
-                  <Github className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-                  <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                    </a>
+                  )}
+                  {project.live && (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                    </a>
+                  )}
                 </div>
               </div>
               <h4 className="font-bold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">{project.title}</h4>
