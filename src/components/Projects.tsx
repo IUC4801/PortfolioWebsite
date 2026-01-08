@@ -4,18 +4,18 @@ import AnimatedSection from "./AnimatedSection";
 // Featured projects - set github/live to undefined or remove to hide the link
 const featuredProjects = [
   {
-    title: "AI Threat Detection System",
-    description: "Real-time security monitoring platform using machine learning to detect and classify network threats. Reduced false positives by 40% using custom-trained anomaly detection models.",
-    tags: ["Python", "TensorFlow", "Kafka", "Elasticsearch"],
-    github: undefined, // No GitHub link
-    live: undefined, // No live link
-  },
-  {
     title: "Scanax",
     description: "Enterprise-grade security vulnerability scanner with AI-powered detection and automated remediation for 50+ vulnerability types across multiple programming languages.",
     tags: ["Typescript", "Python", "Grok"],
     github: "https://github.com/IUC4801/Scanax",
     live: "https://marketplace.visualstudio.com/items?itemName=AyushiChaudhuri.scanax",
+  },
+  {
+    title: "Raptor",
+    description: "AI threat detection platform for real-time security monitoring using machine learning to detect and classify network threats.",
+    tags: ["Python", "TensorFlow", "Kafka", "Elasticsearch"],
+    github: "https://github.com/IUC4801/Raptor",
+    live: undefined, // No live link
   },
   {
     title: "Smart Pocket",
