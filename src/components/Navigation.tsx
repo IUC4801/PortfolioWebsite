@@ -42,7 +42,17 @@ const Navigation = () => {
   }, [mobileMenuOpen]);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    if (element) {
+      const navbarHeight = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
     setMobileMenuOpen(false);
   };
 
@@ -58,6 +68,7 @@ const Navigation = () => {
         <button
           onClick={() => scrollToSection("hero")}
           className="flex items-center gap-2 group z-50"
+          aria-label="Go to home"
         >
           <Terminal className="w-5 h-5 text-primary group-hover:animate-pulse" />
           <span className="font-mono text-sm text-primary">~/portfolio</span>
@@ -70,6 +81,7 @@ const Navigation = () => {
               key={item}
               onClick={() => scrollToSection(item.toLowerCase().replace(/ /g, "-"))}
               className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors duration-300 relative group"
+              aria-label={`Navigate to ${item}`}
             >
               <span className="text-primary/50 mr-1">0{i + 1}.</span>
               {item}
@@ -81,6 +93,7 @@ const Navigation = () => {
           <button
             onClick={() => scrollToSection("contact")}
             className="font-mono text-sm px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            aria-label="Navigate to contact section"
           >
             Get In Touch
           </button>
@@ -100,7 +113,9 @@ const Navigation = () => {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden p-2 text-foreground hover:text-primary transition-colors z-50"
-          aria-label="Toggle menu"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -108,17 +123,20 @@ const Navigation = () => {
 
       {/* Mobile Menu Overlay */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 bg-background/98 backdrop-blur-lg md:hidden transition-all duration-300 ${
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         style={{ top: "0" }}
+        aria-hidden={!mobileMenuOpen}
       >
-        <div className="flex flex-col items-center justify-center min-h-screen gap-8 px-6">
+        <div className="flex flex-col items-center justify-center min-h-screen gap-8 px-6" role="navigation" aria-label="Mobile navigation">
           {navItems.slice(0, -1).map((item, i) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase().replace(/ /g, "-"))}
               className="font-mono text-lg text-muted-foreground hover:text-primary transition-colors duration-300"
+              aria-label={`Navigate to ${item}`}
             >
               <span className="text-primary/50 mr-2">0{i + 1}.</span>
               {item}
@@ -129,6 +147,7 @@ const Navigation = () => {
           <button
             onClick={() => scrollToSection("contact")}
             className="font-mono text-lg px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            aria-label="Navigate to contact section"
           >
             Get In Touch
           </button>

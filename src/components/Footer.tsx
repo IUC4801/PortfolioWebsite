@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { socialLinks } from "@/data/social";
 
 const Footer = () => {
   return (
@@ -6,26 +7,26 @@ const Footer = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-6">
-            {[
-              { icon: Github, href: "https://github.com/IUC4801", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/ayushichaudhuri/", label: "LinkedIn" },
-              { icon: Twitter, href: "https://x.com/ChaudhuriA67938", label: "Twitter" },
-            ].map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
-            ))}
+            {socialLinks.map((social) => {
+              const IconComponent = social.icon === "Github" ? Github : social.icon === "Linkedin" ? Linkedin : social.icon === "Twitter" ? Twitter : null;
+              if (!IconComponent) return null;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <IconComponent className="w-5 h-5" />
+                </a>
+              );
+            })}
           </div>
           
           <p className="font-mono text-xs text-muted-foreground text-center">
-            Designed & Built by <span className="text-primary">Ayushi Chaudhuri</span>
+            Built with ❤️ by <span className="text-primary">Ayushi Chaudhuri</span>
           </p>
           
           <p className="font-mono text-xs text-muted-foreground/50">

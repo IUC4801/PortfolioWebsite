@@ -67,7 +67,7 @@ const Contact = () => {
         </div>
 
         <a
-          href="mailto:hello@example.com"
+          href="mailto:ayushichaudhuri50@gmail.com"
           className="inline-flex items-center gap-2 bg-transparent border border-primary text-primary px-6 sm:px-8 py-3 sm:py-4 font-mono text-xs sm:text-sm font-medium transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:glow-sm"
         >
           <Terminal className="w-4 h-4" />

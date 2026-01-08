@@ -1,36 +1,10 @@
 import AnimatedSection from "./AnimatedSection";
-
-const skillCategories = [
-  {
-    title: "Languages",
-    skills: ["Python", "Java", "Javascript", "TypeScript", "C#", "C++", "SQL", "Shell scripting"],
-  },
-  {
-    title: "Frameworks",
-    skills: ["React", "Node.js", "Express.js", "Next.js", "GraphQL", "WASM", "Django"],
-  },
-  {
-    title: "Security",
-    skills: ["Penetration Testing", "SIEM", "Cryptography", "OWASP", "Burp Suite", "Wireshark", "Threat Modelling", "Secure Code Review"],
-  },
-  {
-    title: "AI/ML",
-    skills: ["Deep Learning", "NLP", "Federated Learning", "MLOps", "MCP", "RAG", "Anomaly Detection"],
-  },
-  {
-    title: "DevOps",
-    skills: ["Linux", "Docker", "Kubernetes", "AWS", "Azure", "CI/CD", "Terraform"],
-  },
-  {
-    title: "Tools",
-    skills: ["Git", "PostgreSQL", "Redis", "MongoDB", "Elasticsearch", "Kafka", "Jenkins", "Azure DevOps"],
-  },
-];
+import { skillCategories } from "@/data/skills";
 
 const Skills = () => {
   return (
     <AnimatedSection>
-    <section id="skills" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-secondary/20">
+    <section id="skills" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-secondary/20 pb-32 sm:pb-40 md:pb-48">
       <div className="container mx-auto max-w-5xl">
         <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
           <span className="font-mono text-primary text-sm sm:text-base">02.</span>

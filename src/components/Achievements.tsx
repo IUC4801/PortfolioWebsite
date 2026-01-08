@@ -1,31 +1,11 @@
-import { Award, FileText, BadgeCheck, Trophy } from "lucide-react";
+import { Award, BadgeCheck } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { achievements, certifications } from "@/data/achievements";
 
 const Achievements = () => {
-  const achievements = [
-    {
-      icon: Trophy,
-      category: "Academic Excellence",
-      title: "Gold Medalist",
-      description: "Branch Topper in B.Tech CSE with specialization in Cybersecurity & Digital Forensics",
-    },
-    {
-      icon: FileText,
-      category: "Research",
-      title: "Published Research Paper",
-      description: "Android Malware Classification using Dynamic Federated Learning in Lecture Notes in Networks and Systems (LNNS) by Springer",
-    },
-  ];
-
-  const certifications = [
-    { name: "Certified Ethical Hacker (CEH)", issuer: "EC-Council" },
-    { name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services" },
-    { name: "Microsoft Azure Fundamentals", issuer: "Microsoft" },
-  ];
-
   return (
     <AnimatedSection>
-    <section id="achievements" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative">
+    <section id="achievements" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative pb-48 sm:pb-56 md:pb-64">
       <div className="container mx-auto max-w-5xl">
         <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
           <span className="font-mono text-primary text-sm sm:text-base">05.</span>

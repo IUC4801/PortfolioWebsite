@@ -1,0 +1,11 @@
+<!-- 
+  TODO: Replace with actual Open Graph image
+  Recommended size: 1200x630px
+  
+  Create an image featuring:
+  - Your name
+  - Title/Role
+  - Optional: Terminal/cybersecurity aesthetic
+  
+  Place the file at: public/og-image.png
+-->

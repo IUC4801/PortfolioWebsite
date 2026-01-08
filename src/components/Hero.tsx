@@ -1,6 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail, FileDown, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { socialLinks } from "@/data/social";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -20,7 +21,17 @@ const Hero = () => {
   }, []);
 
   const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById("about");
+    if (element) {
+      const navbarHeight = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
   };
 
   return (
@@ -39,7 +50,6 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-mono text-primary text-sm sm:text-xl"
-            //className="flex items-center gap-2"
           >
             Hello, World! I'm
           </motion.div>
@@ -103,21 +113,21 @@ const Hero = () => {
             </div>
             
             <div className="flex items-center gap-3 sm:gap-4 mt-2 sm:mt-0">
-              {[
-                { icon: Github, href: "https://github.com/IUC4801", label: "GitHub", external: true },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/ayushichaudhuri/", label: "LinkedIn", external: true },
-                { icon: Mail, href: "#contact", label: "Email", external: false },
-              ].map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  {...(social.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="p-2 text-muted-foreground hover:text-primary transition-colors border border-transparent hover:border-primary/30 rounded"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+              {socialLinks.filter(s => s.label !== "Twitter").map((social) => {
+                const IconComponent = social.icon === "Github" ? Github : social.icon === "Linkedin" ? Linkedin : Mail;
+                const isExternal = social.href.startsWith("http");
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="p-2 text-muted-foreground hover:text-primary transition-colors border border-transparent hover:border-primary/30 rounded"
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
             </div>
           </motion.div>
         </div>
